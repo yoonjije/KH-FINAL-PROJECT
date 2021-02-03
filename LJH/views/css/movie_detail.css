@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+    background-color: beige;
+    width: 100%;
+    height: 300px;
+    z-index: 300;
+    
+}
+
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+#main-container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    height: 2000px;
+}
+
+#basic-info-and-rating {
+    height: 250px;
+    margin-left: 140px;
+}
+
+#poster {
+    position: relative;
+    width: 166px;
+    height: 230px;
+    overflow: hidden;
+    top: -30px;
+    
+}
+
+#basic-info {
+    width: 800px;
+    position: absolute;
+    margin: 0 auto;
+    display: inline-block;
+    left: 0;
+    top: 2px;
+    display: block;
+    left: 140px;
+    margin-left: 200px;
+}
+
+#basic-info h1 {
+    font-weight: 700;
+    font-size: 33px;
+}
+
+#watch-or-comment {
+    margin-top: 40px;
+}
+
+#wanna-watch {
+    width: 250px;
+    height: 40px;
+    background-color: rgb(255, 7, 88);
+    border: none;
+    font-weight: 500;
+    padding: 0 16px;
+}
+
+#wanna-watch:hover {
+    background-color: white;
+    color: rgb(255, 7, 88);
+    border: 2px solid rgb(255, 7, 88);
+    font-weight: bold;
+    transition: all 0.2s ease;
+} 
+
+#star-rating {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+    top: -77px;
+}
+
+#star-rating p {
+    margin: 5px 0;
+}
+
+#star-average {
+    width: 800px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 3px;
+    margin-bottom: 10px;
+}
+
+#year-genre-country {
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+#main-info-container {
+    width: 1000px;
+    height: 2300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    border: 0.5px solid #e3e3e3;
+    border-radius: 0.4rem;
+}
+
+.detail-info {
+    margin: 40px 0 15px;
+}
+.detail-info h4{
+    font-weight: bold;
+    display: inline-block;
+}
+
+#video-zone {
+    width: 900px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.more-info a{
+    float: right;
+    font-size: 18px;
+    color: rgb(255, 7, 88);
+}
+
+.more-info a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 7, 88);
+    transition: all 0.2s ease;
+}
+
+#plot {
+    padding: 10px 0;
+    border-bottom: 0.5px solid #e3e3e3;
+}
+
+#staffs-slider {
+    width: 900px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.slider-elements {
+    display: inline-block;
+    width: 270px;
+    height: 67px;
+}
+.slider-elements a {
+    color: black;
+}
+.slider-elements a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.profile-img {
+    width: 60px;
+    height: 60px;
+    display: inline-block; 
+}
+.name-and-role {
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    margin-top: 10px;
+    
+    display: inline-block;
+    margin: 0 auto;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.comment-card {
+    display: inline-block;
+    width: 270px;
+    height: 300px;
+    margin-right: 30px;
+    margin-top: 10px;
+    background-color: #e3e3e3;
+    
+}
+
+.user-info-and-rating {
+    height: 70px;
+    padding: 10px;
+    
+    border-bottom: 1px solid #aaa;
+}
+
+.comment-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-nickname {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.comment-star-rating {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#like-thumb {
+    width: 25px;
+    height: 25px;
+    margin: 8px 10px 10px;
+}
+
+#like-count {
+    width: 100px;
+    height: 40px;
+    padding: 10px 0;
+}
+
+.like-count-zone {
+    height: 40px;
+    border-bottom: 1px solid #aaa;
+}
+.comment {
+    height: 150px;
+    border-bottom: 1px solid #aaa;
+    padding: 15px;
+}
+
+
+.like-and-report button {
+    font-size: 18px;
+    border: none;
+    margin: 5px 8px;
+    background-color: #e3e3e3;
+    
+}
+
+.like-and-report button:hover {
+    color: black;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.collection-zone {
+    display: inline-block;
+}
+
+
+.collection-card {
+    
+    width: 270px;
+    height: 300px;
+    margin-right: 30px;
+    margin-top: 10px;
+    background-color: #e3e3e3;
+    
+}
+
+.collection-title {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
