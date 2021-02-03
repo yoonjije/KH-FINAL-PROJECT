@@ -30,7 +30,9 @@ a {
     text-decoration: none;
 }
 
-
+header a:hover {
+    text-decoration: none;
+}
 
 #main-container {
     position: relative;
@@ -117,7 +119,7 @@ a {
 
 #main-info-container {
     width: 1000px;
-    height: 2300px;
+    height: 2700px;
     margin: 0 auto;
     padding: 0 40px;
     border: 0.5px solid #e3e3e3;
@@ -186,12 +188,15 @@ a {
     height: 70px;
     padding: 10px;
     margin-top: 10px;
-    
     display: inline-block;
     margin: 0 auto;
     border-bottom: 1px solid #e3e3e3;
 }
 
+#chart-container {
+    width: 900px;
+    height: 450px;
+}
 .comment-card {
     display: inline-block;
     width: 270px;
