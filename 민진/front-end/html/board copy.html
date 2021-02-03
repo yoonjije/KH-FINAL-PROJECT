@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--그리드시스템을 위한 css파일-->
+    <link rel="stylesheet" href="/front-end/css/bootstrap-grid.min.css">
+    <!--reboot.css 는 태그속성들이 다른 브라우저에서 호환이 가능하게끔 스타일을 맞춰주는 css파일 -->
+    <link rel="stylesheet" href="/front-end/css/bootstrap-reboot.min.css">
+    <!--부트스트랩 기능들의 css-->
+    <link rel="stylesheet" href="/front-end/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/front-end/css/board1.css">
+    <title>기본파일</title>
+</head>
+<body>
+    <h2>FAQ</h2>
+    <div id="buttons">
+        <input type="button" class="write_btn yb" value="글쓰기"/><a href="#"></a>
+        <a href="#">
+      <input type="submit" class="write_btn yb" name="cmd" value="삭제" style="float: none" onclick="return confirm('정말로 삭제하시겠습니까?')"/></a>
+    </div>
+    <table class="faq_table">
+        <th><input class="input" type="checkbox"/></th>
+        <th>제목</th>
+    </table>
+    <div class="accordion_banner" style="width: 500px;">
+        <div class="accordion_title">
+            <input class="input" type="checkbox"/>
+            DB정보가 올바르지 않아요.
+        </div>
+        <div class="accordion_sub"><span style="padding-left: 430px; padding-bottom: 10px;"><input type="button" class="modi_btn" value="수정"/></span><br/>
+            <p class="ptag">이미지, 줄거리 등이 사실과 다를 경우, 앱 내에 "고객센터 > DB 수정/추가 요청하기" 버튼을 눌러 신고해주세요.
+             최대한 빨리 반영해서 노여움을 풀어드리겠습니다!</p>
+        </div>
+        <div class="accordion_title">
+            <input type="checkbox"/>
+            어떻게 별점조작을 차단하나요?
+        </div>
+        <div class="accordion_sub"><span style="padding-left: 430px; padding-bottom: 10px;"><input type="button" class="modi_btn" value="수정"/></span><br/>
+           <p class="ptag">왓챠피디아는 소위 '평점알바' 및 '평점놀이 하는 사용자'의 사용 행태와 평가 패턴 등을 여러가지 방식으로 정의하고 있습니다. 그렇게 의심되는 사용자들이 시스템에 의해 발견되면, 해당 사용자들의 별점 평가 및 코멘트가 다른 사용자에게 보이지 않도록 차단하고, 동시에 해당 사용자의 별점이 평균 별점이나 타인의 예상 별점에 영향을 주지 않도록 차단합니다.</p>
+        </div>
+    </div>
+    <div>-페이징처리-</div>
+
+    <!--부트스트랩이 jquery를 사용하고있어 어떠한 js파일보다 상위에 있어야함-->
+    <script src="/front-end/js/jquery.min.js"></script>
+    <!--부트스트랩 4버전부터 popper.js가필요함 bundle.min.js에 popper.js가 포함되어있음-->
+    <script src="/front-end/js/bootstrap.bundle.min.js"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".accordion_banner .accordion_title").click(function() {
+            if($(this).next("div").is(":visible")){
+            $(this).next("div").slideUp("fast");
+            } else {
+                $(".accordion_banner .accordion_sub").slideUp("fast");
+                $(this).next("div").slideToggle("fast");
+            }
+        });
+    });
+</script>
+</html>
