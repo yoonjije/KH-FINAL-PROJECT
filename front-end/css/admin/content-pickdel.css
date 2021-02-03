@@ -1,0 +1,26 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#input-data{
+    background-color: white;
+    margin-top: 50px;
+    border: 2px solid #dcdcdc;
+    text-align: center;
+}
+#del-one{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#del-all{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+#data-page{
+    width: 225px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}

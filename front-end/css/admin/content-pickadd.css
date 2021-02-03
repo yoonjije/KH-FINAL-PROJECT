@@ -1,0 +1,79 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#search-container{
+    float: right;
+    margin-top: 20px;
+}
+#input-tag{
+    width: 100px;
+    display: inline-block;
+
+    
+}
+#input-text{
+    display: inline-block;
+      
+  
+}
+#input-data{
+    text-align: center;
+}
+
+#input-size{
+    margin-left: 15px;
+    text-align: center;
+}
+
+#select-button{
+    margin-bottom: 9px;
+}
+
+#select-search{
+    margin-bottom: 9px;
+}
+
+#mtext{
+    width: 300px;
+}
+#btn-click{
+    display: inline-block;
+}
+#input-data{
+    margin-top: 120px;
+    
+}
+#input-data > table{
+    background-color: white;
+    border: 2px solid #dcdcdc;
+}
+#data-page{
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#input-title{
+    float: right;
+    margin-top: 30px;
+}
+#ctitle{
+    display: inline-block;
+    
+}
+#input-cname{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#follow-data-container{
+    margin-top: 100px;
+}
+#follow-data-container > table{
+    background-color: white;
+    border: 2px solid #dcdcdc;
+}
+#submit{
+    text-align: center;
+}
+

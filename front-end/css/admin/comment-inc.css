@@ -1,0 +1,52 @@
+#pick-h1{
+    text-align: center;
+    margin-top: 25px;
+}
+#move-container{
+    text-align: center;
+}
+
+#move-enrollment{
+    width: 49%;
+    height: 60px;
+    background-color: #5E5E5E;
+    display: inline-block;
+    margin-left: auto;
+    border-radius:10px;
+}
+#move-enrollment > h2{
+    margin-top: 15px;
+}
+#move-cancel{
+    width: 50%;
+    height: 60px;
+    background-color:#5E5E5E;
+    display: inline-block;
+    margin-right: auto;
+    border-radius:10px;
+}
+#move-cancel > h2{
+    margin-top: 15px;
+}
+#input-data{
+    background-color: white;
+    
+    border: 2px solid #dcdcdc;
+    text-align: center;
+}
+#del-one{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#del-all{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+#data-page{
+    width: 216px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
