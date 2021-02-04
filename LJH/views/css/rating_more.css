@@ -139,3 +139,49 @@ header {
     font-weight: bold;
     transition: all 0.2s ease;
 }
+
+/* modal css*/
+
+#modal-title-wrapper {
+    border: none;
+}
+#modal-contents {
+    text-align: center;
+}
+
+#modal-contents img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#modal-contents p {
+    font-weight: bold;
+
+}
+
+#footer-buttons {
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+#footer-button-wrapper {
+    display: block;
+}
+#button-for-signup {
+    background-color: rgb(255, 7, 88);
+    color: white;
+    width: 200px;
+    border: none;
+    font-weight: bold;
+}
+
+#button-for-signin {
+    width: 200px;
+    border: none;
+    background-color: white;
+    color: rgb(255, 7, 88);
+    font-weight: bold;
+}
+
