@@ -1,0 +1,31 @@
+#nav-col{
+    background-color:#0C4265;
+    width: 30%;
+    height: 1250px;
+}
+#admin-info{
+    margin-top: 100px;
+}
+#admin-id{
+    margin-top: 20px;
+    text-align: center;
+}
+#admin-id > strong{
+    font-size: 20px;
+    color: white;
+    
+}
+#dropdown-container{
+    text-align: center;
+}
+#dropdown-container > #dropdown{
+    margin-top: 130px;
+}
+#dropdown > button{
+    background-color: white;
+    color: black;
+}
+
+
+
+

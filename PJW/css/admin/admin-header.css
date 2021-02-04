@@ -1,0 +1,14 @@
+#header-col{
+    background-color: #34495E;
+    width: 100%;
+    height: 100px;
+    
+}
+#logo-container{
+    margin-top: 20px;
+}
+#logo > img{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+}

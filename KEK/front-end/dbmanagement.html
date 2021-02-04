@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin/admin-header.css">
+    <link rel="stylesheet" href="css/admin/admin-nav.css">
+    <link rel="stylesheet" href="css/admin/admin-content.css">
+    <link rel="stylesheet" href="css/admin/admin-wrap.css">
+    <title>기본파일</title>
+</head>
+
+<body>
+   
+        
+        <div class="container" style="height: 100%;">
+                <!--헤더 반응형-->
+            <div class="row">
+                <div id="header-col" class="col-lg-12" >
+                    <!--헤더영역-->
+                    
+                        <div id="logo-container">
+                            <div id="logo">
+                                <img src="img/logo.png" alt="">
+    
+    
+                            </div>
+                        </div>
+    
+    
+                    
+                </div>
+            </div>
+            <!--content 반응형-->
+            <div class="row">
+                <div id="nav-col" class="col-lg-2">
+    
+                    <!--nav영역-->
+    
+                    <!--어드민 정보-->
+                    <div id="admin-info">
+                        <img class="col-lg-12" src="img/person3.png" alt="">
+                        <br />
+                        <div id="admin-id" class="col-lg-12">
+                            <strong>kimeungyu</strong>
+    
+                        </div>
+                    </div>
+                    
+                    
+                    <!--드롭다운버튼 모음-->
+                    <div id="dropdown-container" class="col-lg-12">
+    
+                        <!--대쉬보드-->
+                        <div id="dropdown" class="dropdown-dash">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                대쉬보드
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">통계보기</a>
+    
+                            </div>
+                        </div>
+    
+                        <!--회원관리-->
+                        <div id="dropdown" class="dropdown-user">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                회원관리
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">회원정보조회</a>
+                                <a class="dropdown-item" href="#">블랙리스트관리</a>
+                            </div>
+                        </div>
+                        <!--영화pick-->
+                        <div id="dropdown" class="dropdown-movie">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                영화관리
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">pick 추가</a>
+                                <a class="dropdown-item" href="#">pick 관리</a>
+                                <a class="dropdown-item" href="#">코맨트관리</a>
+                                <a class="dropdown-item" href="#">DB관리</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--section 반응형-->
+                <div id="section-col" class="col-lg-10">
+                    <div id="addpick-search-container">
+                        <div id="addpick-input-tag">
+                            <select class="custom-select" id="addpick-select-search">
+                            <option selected>장르</option>
+                            <option value="1">닉네임</option>
+                            <option value="2">이메일</option>
+                          </select>
+                        </div>
+                        <div id="addpick-input-text">
+                            <div id="addpick-mtext" class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><img src="svg/search.svg" alt="bootstrap"></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="영화제목" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+
+                        </div>
+                        <div id="addpick-btn-click">
+                            <button type="button" class="btn btn-primary btn-sm" id="addpick-select-button">조회</button>
+                        </div>
+
+
+
+                    </div>
+                    
+                    <div id="addpick-input-data" class="col-lg-12">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">선택</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">감독</th>
+                                <th scope="col">장르</th>
+                                <th scope="col">유형</th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td><input type="checkbox"/></td>
+                                <td>가구야 공주 이야기</td>
+                                <td>타카하타 이사오</td>
+                                <td>로맨스</td>
+                                <td>애니메이션</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td><input type="checkbox"/></td>
+                                <td>가디언즈</td>
+                                <td>피터 램지</td>
+                                <td>액션</td>
+                                <td>애니메이션</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td><input type="checkbox"/></td>
+                                <td>가디언즈 오브 갤럭시</td>
+                                <td>제임스 건</td>
+                                <td>액션</td>
+                                <td>sf</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td><input type="checkbox"/></td>
+                                <td>가려진 시간</td>
+                                <td>엄태화</td>
+                                <td>느와르</td>
+                                <td>판타지</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5</th>
+                                <td><input type="checkbox"/></td>
+                                <td>기생충</td>
+                                <td>봉준호</td>
+                                <td>액션</td>
+                                <td>스릴러</td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                          <div id="adddel-btn-container">
+                            <button id="adddel-del-one" type="button" class="btn btn-primary">선택삭제</button>
+                            <button id="adddel-del-all" type="button" class="btn btn-primary">추가</button>
+                        </div>
+
+                          <nav id="addpick-data-page" aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">다음</a></li>
+                            </ul>
+                          </nav>
+                      </div>
+                </div>
+            </div>
+        </div>
+       
+   
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
