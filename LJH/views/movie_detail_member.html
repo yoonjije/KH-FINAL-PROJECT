@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="shortcut icon" href="img/logo_favicon.ico">
     <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link rel="stylesheet" href="css/movie_detail.css" type="text/css" />
+    <link rel="stylesheet" href="css/movie_detail_member.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
@@ -88,24 +88,43 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header" id="modal-title-wrapper">
-                                <h5 class="modal-title" id="exampleModalLabel"></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div id="modal-contents">
-                                    <img src="img/bookmark_gray.svg">
-                                    <p>로그인이 필요한 기능이에요.</p>
-                                    <p>회원가입 혹은 로그인 후 이용해주세요.</p>
+                                    <div id="movie-info">
+                                        <div id="modal-movie-poster">
+                                            <img src="img/220px-영화_소울.jpg" alt="">
+                                        </div>
+                                        <div id="title-and-year">
+                                            <div style="font-weight: bold; font-size: 20px;">소울</div>
+                                            <div>2020</div>
+                                        </div>
+                                    </div>
+                                    <div id="wanna-watch-or-rating">
+                                        <a href="">
+                                            <div id="wanna-watch-button">
+                                                <img src="img/bookmark_gray.svg" alt="">
+                                                <div>보고싶어요</div>
+                                            </div>
+                                        </a>
+                                        <a href="">
+                                            <div id="rating-button">
+                                                <img src="img/comment.svg">
+                                                <div>별점 및</div>
+                                                <div>코멘트 남기기</div>
+                                            </div>
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer" id="footer-buttons">
-                                <div class="footer-button-wrapper">
-                                    <button type="button" class="btn btn-secondary" id="button-for-signup">회원가입</button>
-                                </div>
                                 <div>
-                                    <button type="button" class="btn btn-primary" id="button-for-signin">로그인</button>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                        id="button-for-cancel">취소</button>
                                 </div>
                             </div>
                         </div>
@@ -122,34 +141,6 @@
                     <span><img src="img/star_empty.svg" alt=""></span>
                 </div>
 
-                <div class="modal fade" id="star-rating-modal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header" id="modal-title-wrapper">
-                                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div id="modal-contents">
-                                    <img src="img/star_rated.svg">
-                                    <p>로그인이 필요한 기능이에요.</p>
-                                    <p>회원가입 혹은 로그인 후 이용해주세요.</p>
-                                </div>
-                            </div>
-                            <div class="modal-footer" id="footer-buttons">
-                                <div class="footer-button-wrapper">
-                                    <button type="button" class="btn btn-secondary" id="button-for-signup">회원가입</button>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-primary" id="button-for-signin">로그인</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -374,40 +365,7 @@
                             </div>
                         </div>
 
-
-                        <!-- like Modal -->
-                        <div class="modal fade" id="like-modal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header" id="modal-title-wrapper">
-                                        <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div id="modal-contents">
-                                            <img src="img/thumb.svg">
-                                            <p>로그인이 필요한 기능이에요.</p>
-                                            <p>회원가입 혹은 로그인 후 이용해주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer" id="footer-buttons">
-                                        <div class="footer-button-wrapper">
-                                            <button type="button" class="btn btn-secondary"
-                                                id="button-for-signup">회원가입</button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn-primary"
-                                                id="button-for-signin">로그인</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- siren Modal -->
+                        <!-- siren Modal(member) -->
                         <div class="modal fade" id="report-modal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
