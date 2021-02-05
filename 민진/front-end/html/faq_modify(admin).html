@@ -82,7 +82,7 @@
             </div>
             <div class="page_section section_qna">
                 <div class="head_aticle">
-                <h2 class="tit"><strong>자주하는 질문</strong></h2>
+                <h2 class="tit"><strong>자주하는 질문(수정페이지)</strong></h2>
                 </div>
                 
                 <div class="xans-board-write">
@@ -225,22 +225,4 @@
             })
         })
         </script>
-        <script>
-            window.addEventListener("load",function(){
-            var section = document.querySelector("#section");
-            var tbody = section.querySelector("tbody");
-            var delButton = section.querySelector(".del_button");
-         
-        
-            delButton.onclick = function(){
-                var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
-                //console.log(inputs.length);
-               //if(inputs[0].checked)
-               for(var i=0; i<inputs.length; i++)
-                   inputs[i].parentElement.parentElement.remove();   
-                
-            };
-        });
-        
-            </script>
     </html>

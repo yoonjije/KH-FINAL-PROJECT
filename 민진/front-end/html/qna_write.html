@@ -70,10 +70,10 @@
                             <li class="list_menu">
                                 <a href="">공지사항</a>
                             </li>
-                            <li class="list_menu on">
+                            <li class="list_menu">
                                 <a href="faq_list(admin).html">자주하는 질문</a>
                             </li>
-                            <li class="list_menu">
+                            <li class="list_menu on">
                                 <a href="">1:1 문의</a>
                             </li>
                         </ul>
@@ -82,11 +82,11 @@
             </div>
             <div class="page_section section_qna">
                 <div class="head_aticle">
-                <h2 class="tit"><strong>자주하는 질문</strong></h2>
+                <h2 class="tit"><strong>1:1문의</strong></h2>
                 </div>
                 
                 <div class="xans-board-write">
-                <form name="fm" id="fm" method="post" action="/shop/mypage/indb.php" enctype="multipart/form-data" onsubmit="return chkForm(this)" style="height: 100%;">
+                <form name="fm" id="fm" method="post" action="#" enctype="multipart/form-data" onsubmit="return chkForm(this)" style="height: 100%;">
                 <input type="hidden" name="mode" value="add_qna">
                 <input type="hidden" name="itemcd" value="">
                 <input type="hidden" name="sno" value="0">
@@ -141,7 +141,14 @@
                 </section>
                 <table><tbody><tr><td height="2"></td></tr></tbody></table>
                 <div width="100%" style="padding:5px; padding-top:10px;" class="stxt">
-                <input type="checkbox"/>　바로공개<br>
+                <div>
+                    - 상품 불량 및 오배송의 경우, 해당 제품 사진을 등록 부탁드립니다. <br/>
+                    - 파일명은 영문만 가능하며, 파일당 최대 10MB 의<br/>
+                    　용량 제한이 있습니다.<br/>
+                    - 가로사이즈가 450pixel을 초과하는 경우 자동으로<br/>
+                    　450픽셀로 조정됩니다.<br/>
+                    - 첨부파일은 최대 2개까지 등록가능합니다.<br/>
+                </div>
                 </div>
                 </td>
                 </tr>
@@ -151,7 +158,7 @@
                 <tbody><tr>
                 <td align="right" style="padding-top:20px; border:none;" id="avoidDbl">
                 <input type="submit" class="bhs_button yb" value="저장" style="float:none;">
-                <a href="faq_list(admin).html">
+                <a href="qna_list.html">
                     <input type="button" class="cancel_btn" value="취소"/>
                 </a>
                 </td>
@@ -225,22 +232,4 @@
             })
         })
         </script>
-        <script>
-            window.addEventListener("load",function(){
-            var section = document.querySelector("#section");
-            var tbody = section.querySelector("tbody");
-            var delButton = section.querySelector(".del_button");
-         
-        
-            delButton.onclick = function(){
-                var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
-                //console.log(inputs.length);
-               //if(inputs[0].checked)
-               for(var i=0; i<inputs.length; i++)
-                   inputs[i].parentElement.parentElement.remove();   
-                
-            };
-        });
-        
-            </script>
     </html>

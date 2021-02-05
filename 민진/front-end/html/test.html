@@ -17,7 +17,8 @@
     <link rel="shortcut icon" href="/KH-FINAL-PROJECT/민진/front-end/img/logo_favicon.ico"><!--favicon-->
     <link rel="icon" href="/KH-FINAL-PROJECT/민진/front-end/img/logo_favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> <!--icon-->
-    
+    <!-- 네이버 스마트에디터 -->
+    <script type="text/javascript" src="/KH-FINAL-PROJECT/민진/front-end/html/se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
     <title>EUTCHAPEDIA</title>
     
 </head>
@@ -70,10 +71,10 @@
                             <li class="list_menu">
                                 <a href="">공지사항</a>
                             </li>
-                            <li class="list_menu on">
+                            <li class="list_menu">
                                 <a href="faq_list(admin).html">자주하는 질문</a>
                             </li>
-                            <li class="list_menu">
+                            <li class="list_menu on">
                                 <a href="">1:1 문의</a>
                             </li>
                         </ul>
@@ -82,9 +83,21 @@
             </div>
             <div class="page_section section_qna">
                 <div class="head_aticle">
-                <h2 class="tit"><strong>자주하는 질문</strong></h2>
+                <h2 class="tit"><strong>1:1문의</strong></h2>
+                <div class="reply_row" style="padding-bottom: 30px;">
+                    <div class="notice_wrap">
+                        <div class="q_wrap">    
+                            <span _ngcontent-dui-c129="" class="qatype">Q.</span>
+                            <div>
+                                <p>왓챠피디아에 입사하려면 어떻게 해야하나요? <br/>
+                                     </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 
+               
                 <div class="xans-board-write">
                 <form name="fm" id="fm" method="post" action="/shop/mypage/indb.php" enctype="multipart/form-data" onsubmit="return chkForm(this)" style="height: 100%;">
                 <input type="hidden" name="mode" value="add_qna">
@@ -92,8 +105,9 @@
                 <input type="hidden" name="sno" value="0">
                 <table id="table_after" class="boardWrite2" width="100%">
                 <colgroup><col width="14%" align="right">
-                </colgroup><tbody><tr>
-              
+                </colgroup>
+                <tbody>
+                <tr>
                 <th class="input_txt" style="padding-top:20px;">제목</th>
                 <td><br>
                 <input type="text" name="subject" style="width:100%; height:25px;" required="" fld_esssential="" label="제목" value="">
@@ -105,10 +119,8 @@
                 <strong class="tit qna_public"></strong>             
                 <dl class="list qna_public">
                 </dl>
-                
-                
-                
-                <textarea name="contents" style="width:100%;height:474px;" class="editing_area" required="" fld_esssential="" label="내용"></textarea>
+                <!-- <textarea name="contents" style="width:100%;height:474px;" class="editing_area" required="" fld_esssential="" label="내용"></textarea> -->
+                <textarea name="ir1" id="ir1" rows="10" cols="100">에디터에 기본으로 삽입할 글(수정 모드)이 없다면 이 value 값을 지정하지 않으시면 됩니다.</textarea>
                 </td>
                 </tr>
                 <tr>
@@ -140,9 +152,7 @@
                 </table>
                 </section>
                 <table><tbody><tr><td height="2"></td></tr></tbody></table>
-                <div width="100%" style="padding:5px; padding-top:10px;" class="stxt">
-                <input type="checkbox"/>　바로공개<br>
-                </div>
+                
                 </td>
                 </tr>
                 </tbody></table>
@@ -151,7 +161,7 @@
                 <tbody><tr>
                 <td align="right" style="padding-top:20px; border:none;" id="avoidDbl">
                 <input type="submit" class="bhs_button yb" value="저장" style="float:none;">
-                <a href="faq_list(admin).html">
+                <a href="qna_list(admin).html">
                     <input type="button" class="cancel_btn" value="취소"/>
                 </a>
                 </td>
@@ -225,22 +235,13 @@
             })
         })
         </script>
-        <script>
-            window.addEventListener("load",function(){
-            var section = document.querySelector("#section");
-            var tbody = section.querySelector("tbody");
-            var delButton = section.querySelector(".del_button");
-         
-        
-            delButton.onclick = function(){
-                var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
-                //console.log(inputs.length);
-               //if(inputs[0].checked)
-               for(var i=0; i<inputs.length; i++)
-                   inputs[i].parentElement.parentElement.remove();   
-                
-            };
-        });
-        
-            </script>
+        <script type="text/javascript">
+            var oEditors = [];
+            nhn.husky.EZCreator.createInIFrame({
+             oAppRef: oEditors,
+             elPlaceHolder: "ir1",
+             sSkinURI: "/KH-FINAL-PROJECT/민진/front-end/html/se2/SmartEditor2Skin.html",
+             fCreator: "createSEditor2"
+            });
+        </script>
     </html>
