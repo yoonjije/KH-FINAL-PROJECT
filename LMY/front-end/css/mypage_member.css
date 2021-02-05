@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+.main-title {
+  font-size: 2.5rem;
+  color: rgb(151, 150, 151);
+  letter-spacing: -0.1rem;
+  border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.title-div {
+  padding-top: 20px;
+  padding-left: 200px;
+  padding-bottom: 20px;
+}
 
 .mybody-wrapper {
   height: 100%;
@@ -51,15 +63,16 @@ h6 {
 }
 
 .info {
-  border-top: 3px solid gray;
-  border-bottom: 3px solid gray;
+  overflow: scroll;
+
   padding: 20px;
   min-width: 220px;
   max-width: 220px;
-  min-height: 320px;
-  max-height: 320px;
+  min-height: 480px;
+  max-height: 480px;
   line-height: 2rem;
   font-size: large;
+  background-color: rgb(231, 232, 231);
 }
 
 .info-title {
@@ -71,6 +84,9 @@ h6 {
 
 .info-text {
   text-align: left;
+  font-size: medium;
+  letter-spacing: 0.1rem;
+  color: gray;
 }
 
 /* 중앙부분 시작 */

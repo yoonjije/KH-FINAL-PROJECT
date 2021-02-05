@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 .mybody-wrapper {
+  margin-top: 15px;
   position: relative;
-  margin-top: 80px;
-  height: 100vh;
+  height: 80%;
   padding-bottom: 100px;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -13,11 +13,22 @@
     background-color: rgb(176, 218, 200);
   } */
 
-h1 {
-  font-weight: bold;
-  color: rgb(173, 184, 180);
+.main-title {
+  font-size: 2.5rem;
+  color: rgb(151, 150, 151);
+  letter-spacing: -0.1rem;
+  border-bottom: 1px solid rgb(223, 219, 219);
 }
 
+.title-div {
+  padding-top: 20px;
+  padding-left: 250px;
+  padding-bottom: 20px;
+}
+
+.line {
+  border-bottom: 1px;
+}
 h2 {
   letter-spacing: 0.3rem;
 }
@@ -26,6 +37,53 @@ h6 {
   font-style: italic;
 }
 
+.info {
+  overflow: scroll;
+
+  padding: 20px;
+  min-width: 220px;
+  max-width: 220px;
+  min-height: 180px;
+  max-height: 180px;
+  line-height: 2rem;
+  font-size: large;
+  background-color: rgb(235, 238, 237);
+}
+
+.info-title {
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.info-text {
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: gray;
+}
+
+.sidebar-menu {
+  width: 220px;
+  background-color: rgb(204, 203, 203);
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.sidebar-menu:hover {
+  transition: 0.7s;
+  background-color: rgb(94, 220, 63);
+  font-weight: bold;
+}
+
+.sidebar-menu > a {
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 1.2rem;
+}
 .mybody {
   height: 100%;
   margin-left: 230px;
@@ -95,9 +153,9 @@ h6 {
   max-width: 125px;
   min-height: 150px;
   min-height: 150px;
-  background-color: pink;
   float: left;
 }
+
 .center2 {
   max-height: 380px;
 }
@@ -105,7 +163,6 @@ h6 {
 .center2-box {
   max-width: 500px;
   min-height: 300px;
-  background-color: rgb(209, 209, 204);
 }
 
 .right1 {
