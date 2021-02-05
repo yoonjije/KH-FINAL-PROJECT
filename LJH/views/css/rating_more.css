@@ -185,3 +185,17 @@ header {
     font-weight: bold;
 }
 
+.paging-zone {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.paging-zone button {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.paging-zone button:hover {
+    font-weight: bold;
+}

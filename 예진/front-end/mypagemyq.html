@@ -81,14 +81,14 @@
             border-top: 1px solid #000;
         }
 
-        .myq_item_list .qna_list_block {
+        .my_item {
             overflow: hidden;
             padding: 30px 0;
             border-bottom: 1px solid #ddd;
             text-align: left;
         }
 
-        .qna_list_block .question_block {
+        .my_item .qna_list_block {
             overflow: hidden;
             padding: 25px 30px;
             min-height: 130px;
@@ -96,7 +96,138 @@
             background: #fafafa;
         }
 
+        .qna_list_block .question_block,
+        .qna_list_block .answer_block {
+            overflow: hidden;
+        }
+
+        .qna_list_block .question_block {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            display: block;
+            border-bottom: 0;
+        }
+
+        .my_item .qna_list_block .title_img {
+            width: 60px;
+            text-align: left;
+        }
+
+        .qna_list_block .title_img,
+        .qna_list_block .acc_block {
+            float: left;
+        }
+
+        .my_item .qna_list_block .acc_block {
+            color: #444;
+            padding: 0 0 0 0;
+        }
         
+        .qna_list_block .acc_block .btnArea {
+            padding-top: 12px;
+        }
+
+        .myButton {
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+            background-color:#f9f9f9;
+            border-radius:6px;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            cursor:pointer;
+            color:#666666;
+            font-family:Arial;
+            font-size:11px;
+            font-weight:bold;
+            padding:5px 10px;
+            text-shadow:0px 1px 0px #ffffff;
+        }
+        .myButton:hover {
+            background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+            background-color:#e9e9e9;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+
+        .qna_list_block .answer_block {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+        }
+
+        /********************* 페이징 *********************/
+        .pagination_section {
+            display: block;
+            text-align: center;
+        }
+
+        .pagination_section .custom_pagination {
+            margin-top: 35px;
+        }
+
+        .custom_pagination {
+            display: inline-block;
+            position: relative;
+            padding: 0 50px;
+            text-align: center;
+            line-height: 22px;
+            vertical-align: top;
+        }
+
+        .custom_pagination a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .custom_pagination .pagination_prev {
+            position: absolute;
+            left: 0;
+            margin: -11px 10px 0;
+        }
+
+        .custom_pagination .pagination_next {
+            position: absolute;
+            right: 0;
+            margin: -11px 10px 0;
+        }
+
+        .custom_pagination .pagination_prev,
+        .custom_pagination .pagination_next {
+            display: inline-block;
+            width: 22px;
+            margin: 0 10px;
+            height: 22px;
+            vertical-align: top;
+        }
+
+        .custom_pagination .current {
+            font-weight: 700;
+            color: #000;
+        }
+
+        .custom_pagination .current, 
+        .custom_pagination .pagenum a {
+            display: inline-block;
+            min-width: 10px;
+            padding: 0 5px;
+            font-size: 16px;
+        }
+
+        .custom_pagination .current span {
+            border-bottom: 1px solid #333;
+        }
+
+        .custom_pagination .pagenum a {
+            font-weight: 300;
+            color: #d4d4d4;
+            cursor: pointer;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
 
 
 
@@ -108,7 +239,7 @@
         <div class="wrapper">
             <div class="navbar">
                 <div class="navbar_logo">
-                    <img id="logo" src="/img/logo.png"> <!-- 이미지파일 이동 시 경로 확인!-->
+                    <img id="logo" src="/img/newlogo.png"> <!-- 이미지파일 이동 시 경로 확인!-->
                 </div>
     
                 <div class="menu">
@@ -161,41 +292,186 @@
                     <input type="hidden" name="sortMethod" value="all">
                     <div class="myq_service">
                         <p>
-                            <strong>3건의 문의가 있습니다.</strong>
+                            <strong>5건의 문의가 있습니다.</strong>
                         </p>
                     </div>
                 </form>
 
                 <div class="myq_item_list">
+                    <!------------------ 내역 ------------------->
                     <div class="qitem_grouping">
-                        <div class="qna_list_block">
-                            <div class="question_block">
-                                <strong class="title_img">
-                                    <img src="/img/q.svg" alt="질문">
-                                </strong>
-                                <div class="acc_block">
-                                    <p>안녕하세요 어쪼고 어쩌고 저쩌고 되나요?</p>
-                                    <div>2020/12/17</div>
-                                    <div class="btnArea">
-                                        <!-- 삭제 버튼 -->
+                        <div class="my_item">
+                            <div class="qna_list_block">
+                                <div class="question_block">
+                                    <div class="title_img">
+                                        <img src="/img/q.svg" alt="질문">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요 어쪼고 어쩌고 저쩌고 되나요?</p>
+                                        <div>2020/12/17</div>
+                                        <div class="btnArea">
+                                            <!-- 삭제 버튼 -->
+                                            <button type="button" class="myButton">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer_block">
+                                    <div class="title_img">
+                                        <img src="/img/a.svg" alt="답변">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요. 읏챠피디아입니다.
+                                            <br>
+                                            <br>
+                                            어쩌고 저쩌고 어쩌구 해드리겠습니다.
+                                            <br>
+                                            좋은 하루 되세요.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="answer_block">
-                                <strong class="title_img">
-                                    <img src="/img/a.svg" alt="답변">
-                                </strong>
-                                <div class="acc_block">
-                                    <p>안녕하세요. 읏챠피디아입니다.
-                                        <br>
-                                        <br>
-                                        어쩌고 저쩌고 어쩌구 해드리겠습니다.
-                                        <br>
-                                        좋은 하루 되세요.
-                                    </p>
+                        </div>
+                    </div>
+
+                    <!------------------ 내역 ------------------->
+                    <div class="qitem_grouping">
+                        <div class="my_item">
+                            <div class="qna_list_block">
+                                <div class="question_block">
+                                    <div class="title_img">
+                                        <img src="/img/q.svg" alt="질문">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요 어쪼고 어쩌고 저쩌고 되나요?</p>
+                                        <div>2020/12/17</div>
+                                        <div class="btnArea">
+                                            <!-- 삭제 버튼 -->
+                                            <button type="button" class="myButton">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer_block">
+                                    <div class="title_img">
+                                        <img src="/img/a.svg" alt="답변">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요. 읏챠피디아입니다.
+                                            <br>
+                                            <br>
+                                            어쩌고 저쩌고 어쩌구 해드리겠습니다.
+                                            <br>
+                                            좋은 하루 되세요.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!------------------ 내역 ------------------->
+                    <div class="qitem_grouping">
+                        <div class="my_item">
+                            <div class="qna_list_block">
+                                <div class="question_block">
+                                    <div class="title_img">
+                                        <img src="/img/q.svg" alt="질문">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요 어쪼고 어쩌고 저쩌고 되나요?</p>
+                                        <div>2020/12/17</div>
+                                        <div class="btnArea">
+                                            <!-- 삭제 버튼 -->
+                                            <button type="button" class="myButton">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer_block">
+                                    <div class="title_img">
+                                        <img src="/img/a.svg" alt="답변">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요. 읏챠피디아입니다.
+                                            <br>
+                                            <br>
+                                            어쩌고 저쩌고 어쩌구 해드리겠습니다.
+                                            <br>
+                                            좋은 하루 되세요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------ 내역 ------------------->
+                    <div class="qitem_grouping">
+                        <div class="my_item">
+                            <div class="qna_list_block">
+                                <div class="question_block">
+                                    <div class="title_img">
+                                        <img src="/img/q.svg" alt="질문">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요 어쪼고 어쩌고 저쩌고 되나요?</p>
+                                        <div>2020/12/17</div>
+                                        <div class="btnArea">
+                                            <!-- 삭제 버튼 -->
+                                            <button type="button" class="myButton">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="answer_block">
+                                    <div class="title_img">
+                                        <img src="/img/a.svg" alt="답변">
+                                    </div>
+                                    <div class="acc_block">
+                                        <p>안녕하세요. 읏챠피디아입니다.
+                                            <br>
+                                            <br>
+                                            어쩌고 저쩌고 어쩌구 해드리겠습니다.
+                                            <br>
+                                            좋은 하루 되세요.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------- 페이징 처리 ---------------->
+                <div class="pagination_section">
+                    <div class="custom_pagination">
+                        <span class="pagination_prev disabled">
+                            <a href="">
+                                <ruler-svg-icon-prev>
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 443.52 443.52" style="width: 11px; height: 22px; enable-background:new 0 0 443.52 443.52;" xml:space="preserve">
+                                        <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+                                            c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+                                            L143.492,221.863z" style="stroke: rgb(0,0,0); stroke-width: 22;"/>
+                                    </svg>
+                                </ruler-svg-icon-prev>
+                            </a>
+                        </span>
+                        <span class="pagenum current">
+                            <span>1</span>
+                        </span>
+                        <span class="pagenum">
+                            <a>2</a>
+                        </span>
+                        <span class="pagination_next">
+                            <a href="">
+                                <ruler-svg-icon-next width="11" height="22" stroke="#000">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 443.52 443.52" style="width: 11px; height: 22px; enable-background:new 0 0 443.52 443.52;" xml:space="preserve">
+                                        <path d="M336.226,209.591l-204.8-204.8c-6.78-6.548-17.584-6.36-24.132,0.42c-6.388,6.614-6.388,17.099,0,23.712l192.734,192.734
+                                                L107.294,414.391c-6.663,6.664-6.663,17.468,0,24.132c6.665,6.663,17.468,6.663,24.132,0l204.8-204.8
+                                                C342.889,227.058,342.889,216.255,336.226,209.591z" style="stroke: rgb(0,0,0); stroke-width: 22;"/>
+                                    </svg>
+                                </ruler-svg-icon-next>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>

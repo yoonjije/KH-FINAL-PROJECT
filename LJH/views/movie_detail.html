@@ -11,8 +11,15 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!--icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- slick js-->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- xeicon -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 
 <body>
@@ -107,7 +114,8 @@
 
                 <div id="star-rating">
                     <p>평가하기</p>
-                    <span><a id="link-for-star-rating"data-toggle="modal" data-target="#star-rating-modal"><img src="img/star_empty.svg" alt=""></a></span>
+                    <span><a id="link-for-star-rating" data-toggle="modal" data-target="#star-rating-modal"><img
+                                src="img/star_empty.svg" alt=""></a></span>
                     <span><img src="img/star_empty.svg" alt=""></span>
                     <span><img src="img/star_empty.svg" alt=""></span>
                     <span><img src="img/star_empty.svg" alt=""></span>
@@ -115,39 +123,39 @@
                 </div>
 
                 <div class="modal fade" id="star-rating-modal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header" id="modal-title-wrapper">
-                            <h5 class="modal-title" id="exampleModalLabel"></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="modal-contents">
-                                <img src="img/star_rated.svg">
-                                <p>로그인이 필요한 기능이에요.</p>
-                                <p>회원가입 혹은 로그인 후 이용해주세요.</p>
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" id="modal-title-wrapper">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                        </div>
-                        <div class="modal-footer" id="footer-buttons">
-                            <div class="footer-button-wrapper">
-                                <button type="button" class="btn btn-secondary" id="button-for-signup">회원가입</button>
+                            <div class="modal-body">
+                                <div id="modal-contents">
+                                    <img src="img/star_rated.svg">
+                                    <p>로그인이 필요한 기능이에요.</p>
+                                    <p>회원가입 혹은 로그인 후 이용해주세요.</p>
+                                </div>
                             </div>
-                            <div>
-                                <button type="button" class="btn btn-primary" id="button-for-signin">로그인</button>
+                            <div class="modal-footer" id="footer-buttons">
+                                <div class="footer-button-wrapper">
+                                    <button type="button" class="btn btn-secondary" id="button-for-signup">회원가입</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-primary" id="button-for-signin">로그인</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
             </div>
         </div>
         <div id="main-info-container">
-            <div id="trailer-zone">
-                <div class="detail-info">
+            <div id="trailer-zone" class="detail-info">
+                <div id="trailer-title">
                     <h4>예고편</h4>
                 </div>
                 <div id="video-zone">
@@ -156,8 +164,8 @@
                         allowfullscreen></iframe>
                 </div>
             </div>
-            <div id="movie-basic-info">
-                <div class="detail-info">
+            <div class="detail-info" id="movie-basic-info">
+                <div>
                     <h4>기본 정보</h4>
                     <span class="more-info"><a href="movie_more_info.html">더보기</a></span>
                 </div>
@@ -178,8 +186,8 @@
 
             <div id="staffs">
                 <div class="detail-info">
-                    <h4>출연/제작</h4>
-                    <div id="staffs-slider">
+                    <h4 id="actor-and-pd">출연/제작</h4>
+                    <div class="my-slider" id="staffs-slider">
                         <div class='slider-elements'>
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
@@ -193,7 +201,7 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
+                                    <div class="staff-name">켐프 파워스</div>
                                     <div class="staff-role">감독</div>
                                 </div>
                             </a>
@@ -202,8 +210,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">제이미 폭스</div>
+                                    <div class="staff-role">성우 | 조 가드너</div>
                                 </div>
                             </a>
                         </div>
@@ -211,8 +219,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">티나 페이</div>
+                                    <div class="staff-role">성우 | 22</div>
                                 </div>
                             </a>
                         </div>
@@ -220,8 +228,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">그레이엄 노튼</div>
+                                    <div class="staff-role">성우 | 문윈드</div>
                                 </div>
                             </a>
                         </div>
@@ -229,8 +237,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">레이첼 하우스</div>
+                                    <div class="staff-role">성우 | 테리</div>
                                 </div>
                             </a>
                         </div>
@@ -238,8 +246,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">엘리스 브라가</div>
+                                    <div class="staff-role">성우 | 제리</div>
                                 </div>
                             </a>
                         </div>
@@ -247,8 +255,8 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">리처드 아이오아디</div>
+                                    <div class="staff-role">성우 | 제리</div>
                                 </div>
                             </a>
                         </div>
@@ -256,8 +264,35 @@
                             <a href="">
                                 <img src="img/profile.svg" class="profile-img">
                                 <div class="name-and-role">
-                                    <div class="staff-name">피트 닥터</div>
-                                    <div class="staff-role">감독</div>
+                                    <div class="staff-name">도넬 로우링스</div>
+                                    <div class="staff-role">성우 | 데즈</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class='slider-elements'>
+                            <a href="">
+                                <img src="img/profile.svg" class="profile-img">
+                                <div class="name-and-role">
+                                    <div class="staff-name">아미어-칼리브 톰슨</div>
+                                    <div class="staff-role">성우 | 컬리</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class='slider-elements'>
+                            <a href="">
+                                <img src="img/profile.svg" class="profile-img">
+                                <div class="name-and-role">
+                                    <div class="staff-name">안젤라 바셋</div>
+                                    <div class="staff-role">성우 | 도로시아</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class='slider-elements'>
+                            <a href="">
+                                <img src="img/profile.svg" class="profile-img">
+                                <div class="name-and-role">
+                                    <div class="staff-name">다비드 딕스</div>
+                                    <div class="staff-role">성우 | 폴</div>
                                 </div>
                             </a>
                         </div>
@@ -266,9 +301,8 @@
                 </div>
                 <div class="detail-info">
                     <h4>별점 그래프</h4>
-                    <div class="detail-info" id="chart-container">
+                    <div id="chart-container">
                         <canvas id="myChart" style="width: 600px; height: 300px;"></canvas>
-
                     </div>
                 </div>
                 <div class="detail-info">
@@ -290,8 +324,53 @@
                                 <span id="like-count">123</span>
                             </div>
                             <div class="like-and-report">
-                                <span><button data-toggle="modal" id="like-button" data-target="#like-modal">좋아요</button></span>
-                                <span><button data-toggle="modal" id="report-button" data-target="#report-modal">신고하기</button></span>
+                                <span><button data-toggle="modal" id="like-button"
+                                        data-target="#like-modal">좋아요</button></span>
+                                <span><button data-toggle="modal" id="report-button"
+                                        data-target="#report-modal">신고하기</button></span>
+                            </div>
+                        </div>
+                        <div class="comment-card">
+                            <div class="user-info-and-rating">
+                                <img src="img/profile.svg" class="profile-img" />
+                                <div class="user-nickname">김은규</div>
+                                <div class="comment-star-rating">★ 4.5</div>
+                            </div>
+                            <div class="comment">
+                                <p>인생영화 각</p>
+
+                            </div>
+                            <div class="like-count-zone">
+                                <img src="img/like.svg" id="like-thumb" />
+                                <span id="like-count">123</span>
+                            </div>
+                            <div class="like-and-report">
+                                <span><button data-toggle="modal" id="like-button"
+                                        data-target="#like-modal">좋아요</button></span>
+                                <span><button data-toggle="modal" id="report-button"
+                                        data-target="#report-modal">신고하기</button></span>
+                            </div>
+                        </div>
+
+                        <div class="comment-card">
+                            <div class="user-info-and-rating">
+                                <img src="img/profile.svg" class="profile-img" />
+                                <div class="user-nickname">박서우</div>
+                                <div class="comment-star-rating">★ 5.0</div>
+                            </div>
+                            <div class="comment">
+                                <p>읏챠피디아를 뒤집어 놓으셨다</p>
+                                <p>최고의 영화</p>
+                            </div>
+                            <div class="like-count-zone">
+                                <img src="img/like.svg" id="like-thumb" />
+                                <span id="like-count">123</span>
+                            </div>
+                            <div class="like-and-report">
+                                <span><button data-toggle="modal" id="like-button"
+                                        data-target="#like-modal">좋아요</button></span>
+                                <span><button data-toggle="modal" id="report-button"
+                                        data-target="#report-modal">신고하기</button></span>
                             </div>
                         </div>
 
@@ -359,29 +438,54 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
-                    <div class="detail-info">
-                        <h4>이 작품이 담긴 컬렉션</h4>
-                        <div>
-                            <div class="collection-zone">
-                                <div class="collection-card">컬렉션입니다</div>
-                                <div class="collection-title">읏챠피디아 엄선 컬렉션</div>
-                            </div>
-                            <div class="collection-zone">
-                                <div class="collection-card">컬렉션입니다</div>
-                                <div class="collection-title">개발자 서우 PICK!</div>
-                            </div>
-                            <div class="collection-zone">
-                                <div class="collection-card">컬렉션입니다</div>
-                                <div class="collection-title">개발자 윤지 PICK!</div>
-                            </div>
+
+                </div>
+                <div class="detail-info" id="collection">
+                    <h4>이 작품이 담긴 컬렉션</h4>
+                    <div>
+                        <div class="my-slider" id="collection-slider">
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">읏챠피디아 엄선 컬렉션</div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">디즈니&픽사 완전 정복</div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">개발자 윤지 PICK!</div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">개발자 은규 PICK!</div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">개발자 지현 PICK!</div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="collection-zone">
+                                    <div class="collection-card">컬렉션입니다</div>
+                                    <div class="collection-title">개발자 종웅 PICK!</div>
+                                </div>
+                            </a>
                         </div>
+                        </a>
                     </div>
                 </div>
+
 
             </div>
         </div>
@@ -420,7 +524,7 @@
             </div>
         </footer>
         <!-- scripts -->
-        <script src="js/jquery.min.js"></script>
+
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
@@ -470,6 +574,12 @@
                 }
             });
 
+            // slider script
+            $('.my-slider').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 4
+            });
 
         </script>
 </body>

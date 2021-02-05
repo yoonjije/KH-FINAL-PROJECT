@@ -5,114 +5,21 @@
     <meta charset="utf-8"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> 
     <!--그리드시스템을 위한 css파일-->
-    <link rel="stylesheet" href="/front-end/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/KH-FINAL-PROJECT/민진/front-end/css/bootstrap-grid.min.css">
     <!--reboot.css 는 태그속성들이 다른 브라우저에서 호환이 가능하게끔 스타일을 맞춰주는 css파일 -->
-    <link rel="stylesheet" href="/front-end/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/KH-FINAL-PROJECT/민진/front-end/css/bootstrap-reboot.min.css">
     <!--부트스트랩 기능들의 css-->
-    <link rel="stylesheet" href="/front-end/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/front-end/css/faq.css">
+    <link rel="stylesheet" href="/KH-FINAL-PROJECT/민진/front-end/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/KH-FINAL-PROJECT/민진/front-end/css/faq.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css">
-    <link rel="shortcut icon" href="/front-end/img/logo_favicon.ico"> <!--favicon-->
-    <link rel="icon" href="/front-end/img/logo_favicon.ico">
+    <link rel="stylesheet" href="/KH-FINAL-PROJECT/민진/front-end/css/index.css">
+    <link rel="shortcut icon" href="/KH-FINAL-PROJECT/민진/front-end/img/logo_favicon.ico"><!--favicon-->
+    <link rel="icon" href="/KH-FINAL-PROJECT/민진/front-end/img/logo_favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"> <!--icon-->
     
     <title>EUTCHAPEDIA</title>
-    <style>
-.page_aticle.aticle_type2 .page_section {
-    float: right;
-    width: 820px;
-    }
-.page_aticle button, .page_aticle input, .page_aticle select, .page_aticle * {
-    font-family: noto sans;
-    font-weight: 400;
-    letter-spacing: 0;
-}
-div, th, td, li, dt, dd, p {
-    word-break: break-all;
-}
-.xans-board-write .boardWrite2 {
-    table-layout: fixed;
-    border-top: 2px solid #333;
-    width:700px;
-    line-height: 180%;
-}
-
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-div {
-    display: block;
-}
-
-body, input, select, textarea, button {
-    font-family: noto sans,malgun gothic,AppleGothic,dotum;
-    line-height: 1;
-    letter-spacing: -.05em;
-    color: #4c4c4c;
-    font-size: 12px;
-    max-width: 90%;
-}
-
-.boardWrite2 th {
-    text-align: center;
-    background-color: #F7F5F4;
-}
-
-.boardWrite2 td {
-    padding-left:15px;
-}
-
-.bhs_button, .cancel_btn{
-    width: 40px;
-    display: inline-block;
-    line-height: 25px;
-    text-align: center;
-    background-color:rgb(219, 52, 115);
-    border: 1px solid rgb(219, 52, 115);
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-  }
-
-.bhs_button:hover, .cancel_btn:hover{
-    display: inline-block;
-    line-height: 25px;
-    text-align: center;
-    background-color:rgba(219, 52, 115, 0.85);
-    border: 1px solid rgba(219, 52, 115, 0.85);
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-  }
-  .del_button {
-    width: 40px;
-    display: inline-block;
-    line-height: 25px;
-    text-align: center;
-    background-color:rgb(219, 52, 115);
-    border: 1px solid rgb(219, 52, 115);
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-  }
-  .del-button:hover{
-    display: inline-block;
-    line-height: 25px;
-    text-align: center;
-    background-color:rgba(219, 52, 115, 0.85);
-    border: 1px solid rgba(219, 52, 115, 0.85);
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-  }
-    </style>
+    
 </head>
 
 <body>
@@ -120,8 +27,9 @@ body, input, select, textarea, button {
         <div class="wrapper">
             <div class="navbar">
                 <div class="navbar_logo">
-                    <img id="logo" src="/front-end/img/logo.png"> <!-- 이미지파일 이동 시 경로 확인!-->
+                    <img id="logo" src="/KH-FINAL-PROJECT/민진/front-end/img/logo.png"> <!-- 이미지파일 이동 시 경로 확인!-->
                 </div>
+
     
                 <div class="menu">
                 <ul>
@@ -174,7 +82,7 @@ body, input, select, textarea, button {
             </div>
             <div class="page_section section_qna">
                 <div class="head_aticle">
-                <h2 class="tit">자주하는 질문</h2>
+                <h2 class="tit"><strong>자주하는 질문</strong></h2>
                 </div>
                 
                 <div class="xans-board-write">
@@ -225,32 +133,8 @@ body, input, select, textarea, button {
                             <!-- <input type="button" name="del_btn" id="delete" class="del_btn" value="삭제"/> -->
                             </td>
                         </tr>
-                        <tr data-tr_value="3">
-                            <td><input type="checkbox" name="checkRow"/></td>
-                            <td width="30" nowrap="" align="center">3</td>
-                            <td width="100%">
-                            <input type="file" name="file[]" style="width:50%" class="linebg">
-                            <!-- <input type="button" name="del_btn" id="delete" class="del_btn" value="삭제"/> -->
-                            </td>
-                        </tr>
-                        <tr data-tr_value="4">
-                            <td><input type="checkbox" name="checkRow"/></td>
-                            <td width="30" nowrap="" align="center">4</td>
-                            <td width="100%">
-                            <input type="file" name="file[]" style="width:50%" class="linebg">
-                            <!-- <input type="button" name="del_btn" id="delete" class="del_btn" value="삭제"/> -->
-                            </td>
-                        </tr>
-                        <tr data-tr_value="5">
-                            <td><input type="checkbox" name="checkRow"/></td>
-                            <td width="30" nowrap="" align="center">5</td>
-                            <td width="100%">
-                            <input type="file" name="file[]" style="width:50%" class="linebg">
-                            <!-- <input type="button" name="del_btn" id="delete" class="del_btn" value="삭제"/> -->
-                            </td>
-                        </tr>
                     </tbody>
-                    <div style="padding-left: 485px;">
+                    <div style="padding-left: 630px;">
                       <input type="button" name="del_btn" id="delete" class="del_button" value="삭제"/>
                     </div>    
                 </table>
@@ -267,7 +151,9 @@ body, input, select, textarea, button {
                 <tbody><tr>
                 <td align="right" style="padding-top:20px; border:none;" id="avoidDbl">
                 <input type="submit" class="bhs_button yb" value="저장" style="float:none;">
-                <input type="button" class="cancel_btn" value="취소"/>
+                <a href="faq_list(admin).html">
+                    <input type="button" class="cancel_btn" value="취소"/>
+                </a>
                 </td>
                 </tr>
                 </tbody></table>
@@ -339,4 +225,22 @@ body, input, select, textarea, button {
             })
         })
         </script>
+        <script>
+            window.addEventListener("load",function(){
+            var section = document.querySelector("#section");
+            var tbody = section.querySelector("tbody");
+            var delButton = section.querySelector(".del_button");
+         
+        
+            delButton.onclick = function(){
+                var inputs = tbody.querySelectorAll("input[type='checkbox']:checked");
+                //console.log(inputs.length);
+               //if(inputs[0].checked)
+               for(var i=0; i<inputs.length; i++)
+                   inputs[i].parentElement.parentElement.remove();   
+                
+            };
+        });
+        
+            </script>
     </html>
