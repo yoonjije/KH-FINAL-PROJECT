@@ -25,7 +25,7 @@
         }
         
         .page_notiboard_sction {
-            height: auto !important%;
+            height: auto !important;
             padding-top: 20px;
         }
 
@@ -172,7 +172,7 @@
         }
 
         .tbl_notice_info .tbl_info_type {
-            width: 140px;
+            width: 80px;
             padding: 15px 0;
             color: #000;
         }
@@ -304,6 +304,63 @@
             overflow: hidden;
         }
 
+        /******************** 버튼 *********************/
+        .modi_btn {
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+            background-color:#f9f9f9;
+            border-radius:6px;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            cursor:pointer;
+            color:#666666;
+            font-family:Arial;
+            font-size:11px;
+            font-weight:bold;
+            padding:5px 10px;
+            text-shadow:0px 1px 0px #ffffff;
+        }
+        .modi_btn:hover {
+            background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+            background-color:#e9e9e9;
+        }
+        .modi_btn:active {
+            position:relative;
+            top:1px;
+        }
+
+        .modi_span a {
+            text-decoration: none;
+        }
+
+        .buttons {
+            padding-top: 10px;
+        }
+
+        .write_btn {
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            display: inline-block;
+            line-height: 25px;
+            text-align: center;
+            background-color:rgb(219, 52, 115);
+            border: 1px solid rgb(219, 52, 115);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .board_write_btn {
+            text-align: center;
+        }
+
+        .write_btn:hover {
+            background-color:rgba(219, 52, 115, 0.85);
+            border: 1px solid rgba(219, 52, 115, 0.85);
+            color: white;
+            text-decoration: none;
+        }
+
 
     </style>
 </head>
@@ -384,6 +441,7 @@
                         <div class="accordion_banner" id="tbl_notice">
                             <div class="tbl_notice_tit">
                                 <div class="tbl_notice_info">
+                                    <p class="tbl_info_type"><input type="checkbox" class="checkall"/></p>
                                     <p class="tbl_info_type">번호</p>
                                     <p class="tbl_info_tit">제목</p>
                                     <p class="tbl_info_date">작성일</p>
@@ -392,6 +450,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -412,6 +473,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -420,6 +485,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -440,6 +508,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -448,6 +520,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -468,6 +543,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -476,6 +555,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -496,6 +578,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -504,6 +590,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -524,6 +613,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -532,6 +625,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -552,6 +648,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -560,6 +660,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -580,6 +683,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                                <span class="modi_span">
+                                                    <a href="" class="modi_btn">수정</a>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
@@ -588,6 +695,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -608,6 +718,10 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+
+                                            <span class="modi_span">
+                                                <a href="" class="modi_btn">수정</a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -616,6 +730,9 @@
                             <div class="accordion_title">
                                 <div class="tbl_notice_info">
                                     <div class="infoinner">
+                                        <p class="tbl_info_type"><input type="checkbox" name="del-id" value="${n.nno}" class="checkbox">
+                                            <span class="blind">체크박스</span>
+                                        </p>
                                         <p class="tbl_info_type">17
                                             <span class="blind">번호</span>
                                         </p>
@@ -636,14 +753,19 @@
                                             <p>읏챠피디아 입니다.</p>
                                             <p>더 나은 서비스를 제공할 수 있도록 개인정보 처리방침 문서를
                                                 변경하였음을 알려드립니다.</p>
+                                            
+                                            <span class="modi_span">
+                                                <a href="" class="modi_btn">수정</a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 관리자 버튼-->
-                            <div class="">
-                                
+                            <div class="buttons">
+                                <a href=""><input type="button" class="write_btn yb" value="글쓰기"/></a>
+                                <input type="submit" class="write_btn yb" name="cmd" value="삭제" style="float: none" onclick="return confirm('정말로 삭제하시겠습니까?')"/>
                             </div>
 
                             <!-- 페이징 -->

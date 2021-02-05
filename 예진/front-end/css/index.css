@@ -106,7 +106,7 @@ li{
     overflow: hidden;
     color: #7e7e7e80;
     /* background:#ccc9c93a; */
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .searchbar input[type=text]{
