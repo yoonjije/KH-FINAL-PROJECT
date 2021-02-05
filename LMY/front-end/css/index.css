@@ -7,19 +7,7 @@
   text-decoration: none;
   outline: none;
   list-style: none;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 li {
@@ -33,6 +21,7 @@ li {
 #logo {
   width: 280px;
   height: 40px;
+  padding-left: 0 20px;
 }
 
 .wrapper .navbar {
@@ -42,9 +31,7 @@ li {
   width: 100%;
   height: 75px;
   padding: 0 30px;
-
-  background: #ffffff;
-  position: relative;
+  background: transparent;
 }
 
 .wrapper .navbar .menu ul li {
@@ -145,8 +132,10 @@ li {
 /*-------footer---------*/
 
 footer {
+  position: relative;
   width: 100%;
   margin: 0 auto;
+  top: 1000px;
 }
 
 .row-space {
@@ -184,6 +173,8 @@ footer {
   margin: 0 auto;
   background-color: #1c1d1f;
   padding: 20px 100px 38px;
+
+  /* padding-bottom: 30px;*/
   color: #ffffff;
   font-size: 0.8rem;
   text-align: left;

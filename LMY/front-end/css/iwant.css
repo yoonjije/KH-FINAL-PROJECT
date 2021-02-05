@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.mybody-wrapper {
+  margin-top: 50px;
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-left: 10px;
+}
+.title {
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: -1.4px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  line-height: 3em;
+}
+
+.moviewrapper {
+  float: left;
+  padding: 15px;
+}
+
+.poster {
+  border-radius: 10%;
+}
