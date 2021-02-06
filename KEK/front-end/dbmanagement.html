@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/admin/admin-header.css">
     <link rel="stylesheet" href="css/admin/admin-nav.css">
     <link rel="stylesheet" href="css/admin/admin-content.css">
-    <link rel="stylesheet" href="css/admin/admin-wrap.css">
-    <title>기본파일</title>
+    <link rel="stylesheet" href="css/admin/dbmanagement.css">
+    <title>dbmanagement</title>
 </head>
 
 <body>
@@ -94,16 +94,20 @@
                 </div>
                 <!--section 반응형-->
                 <div id="section-col" class="col-lg-10">
-                    <div id="addpick-search-container">
-                        <div id="addpick-input-tag">
-                            <select class="custom-select" id="addpick-select-search">
+                  <div id="pick-h1">
+                    <h1>db관리</h1>
+
+                </div>  
+                  <div id="dbmanagement-search-container">
+                        <div id="dbmanagement-input-tag">
+                            <select class="custom-select" id="dbmanagement-select-search">
                             <option selected>장르</option>
                             <option value="1">닉네임</option>
                             <option value="2">이메일</option>
                           </select>
                         </div>
-                        <div id="addpick-input-text">
-                            <div id="addpick-mtext" class="input-group mb-3">
+                        <div id="dbmanagement-input-text">
+                            <div id="dbmanagement-mtext" class="input-group mb-3">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" id="basic-addon1"><img src="svg/search.svg" alt="bootstrap"></span>
                                 </div>
@@ -111,15 +115,15 @@
                               </div>
 
                         </div>
-                        <div id="addpick-btn-click">
-                            <button type="button" class="btn btn-primary btn-sm" id="addpick-select-button">조회</button>
+                        <div id="dbmanagement-btn-click">
+                            <button type="button" class="btn btn-primary btn-sm" id="dbmanagement-select-button">조회</button>
                         </div>
 
 
 
                     </div>
                     
-                    <div id="addpick-input-data" class="col-lg-12">
+                    <div id="dbmanagement-input-data" class="col-lg-12">
                         <table class="table table-hover">
                             <thead>
                               <tr>
@@ -176,12 +180,32 @@
                               
                             </tbody>
                           </table>
-                          <div id="adddel-btn-container">
-                            <button id="adddel-del-one" type="button" class="btn btn-primary">선택삭제</button>
-                            <button id="adddel-del-all" type="button" class="btn btn-primary">추가</button>
+                          <div id="dbmanagement-btn-container">
+                            <button id="dbmanagement-del-one" type="button" class="btn btn-primary" data-toggle="modal" data-target="#d-del-one">선택삭제</button>
+                             <!--modal1-->
+                             <div class="modal fade" id="d-del-one" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">해제</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                   선택 취소를 하시겠습니까?
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                                    <button type="button" class="btn btn-primary">확인</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button id="dbmanagement-del-all" type="button" class="btn btn-primary">추가</button>
                         </div>
 
-                          <nav id="addpick-data-page" aria-label="Page navigation example">
+                          <nav id="dbmanagement-data-page" aria-label="Page navigation example">
                             <ul class="pagination">
                               <li class="page-item"><a class="page-link" href="#">이전</a></li>
                               <li class="page-item"><a class="page-link" href="#">1</a></li>
