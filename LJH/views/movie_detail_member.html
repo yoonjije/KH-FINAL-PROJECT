@@ -82,7 +82,7 @@
                         data-target="#wanna-watch-modal">보고싶어요</button>
                 </div>
 
-                <!-- Modal -->
+                <!-- 보고싶어요/별점 및 코멘트 남기기 Modal -->
                 <div class="modal fade" id="wanna-watch-modal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -110,7 +110,8 @@
                                                 <div>보고싶어요</div>
                                             </div>
                                         </a>
-                                        <a href="">
+                                        <a href="" data-toggle="modal" data-target="#rating-and-comment-modal"
+                                            data-dismiss="modal" aria-label="Close">
                                             <div id="rating-button">
                                                 <img src="img/comment.svg">
                                                 <div>별점 및</div>
@@ -130,6 +131,50 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 별점 및 코멘트 남기기 모달 -->
+                <div class="modal fade" id="rating-and-comment-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" id="rating-and-comment-modal-header">
+                                <h5 class="modal-title" id="rating-and-comment-modal-title">별점 및 코멘트 등록하기</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="rating-and-comment-modal-contents">
+                                    <div id="modal-movie-title">
+                                        <h5>소울</h5>
+                                    </div>
+                                    <div id="star-rating-zone">
+
+                                        <img src="img/star_empty.svg" alt="">
+                                        <img src="img/star_empty.svg" alt="">
+                                        <img src="img/star_empty.svg" alt="">
+                                        <img src="img/star_empty.svg" alt="">
+                                        <img src="img/star_empty.svg" alt="">
+                                        <span id="rating-message">최고예요!</span>
+                                    </div>
+                                    <textarea id="modal-comment-zone" row="1" cols="1" rows="1"
+                                        placeholder="이 영화에 대한 감상평을 자유롭게 남겨주세요."
+                                        style="resize: none; width: 400px; height: 300px; padding: 10px;"></textarea>
+                                </div>
+                                <!-- 스포일러 포함/미포함 구현할지 생각해보기 -->
+                            </div>
+                            <div class="modal-footer" id="footer-buttons">
+                                <div>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        aria-label="Close" id="button-for-cancel">취소</button>
+                                    <button type="button" class="btn btn-primary" id="button-for-submit">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <div id="star-rating">
                     <p>평가하기</p>
@@ -298,7 +343,7 @@
                 </div>
                 <div class="detail-info">
                     <h4>코멘트</h4>
-                    <span class="more-info"><a href="rating_more.html">더보기</a></span>
+                    <span class="more-info"><a href="rating_more_member.html">더보기</a></span>
                     <div id="comment-zone">
                         <div class="comment-card">
                             <div class="user-info-and-rating">
@@ -371,33 +416,68 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header" id="modal-title-wrapper">
-                                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">신고하기</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <div id="modal-contents">
-                                            <img src="img/siren.png">
-                                            <p>로그인이 필요한 기능이에요.</p>
-                                            <p>회원가입 혹은 로그인 후 이용해주세요.</p>
+                                        <div id="report-modal-contents">
+                                            <div id="report-modal-movie-title">
+                                                <h5>제목</h5>
+                                                <div>소울</div>
+                                            </div>
+                                            <div id="report-modal-author">
+                                                <h5>작성자</h5>
+                                                <div>지니어스현</div>
+                                            </div>
+                                            <div id="report-modal-comment-contents">
+                                                <h5>내용</h5>
+                                                <p>최고의 영화</p>
+                                                <p>읏챠피디아를 뒤집어 놓으셨다</p>
+                                            </div>
+                                            <textarea id="report-modal-comment-zone" row="1" cols="1" rows="1"
+                                                placeholder="신고하시는 이유를 작성해주세요."
+                                                style="resize: none; width: 450px; height: 300px; padding: 10px;"></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-footer" id="footer-buttons">
-                                        <div class="footer-button-wrapper">
-                                            <button type="button" class="btn btn-secondary"
-                                                id="button-for-signup">회원가입</button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn-primary"
-                                                id="button-for-signin">로그인</button>
-                                        </div>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                            aria-label="Close" id="button-for-cancel">취소</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#report-result-modal" data-dismiss="modal" aria-label="Close"
+                                            id="button-for-submit">확인</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- 신고 결과 모달 -->
+                    <div class="modal fade" id="report-result-modal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" id="modal-title-wrapper">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="report-result-modal-contents">
+                                        <p>제출이 완료되었습니다.</p>
+                                        <p>신고하신 코멘트는 관리자의 검토 후 처리됩니다.</p>
+                                        <p>감사합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="footer-buttons">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="detail-info" id="collection">
                     <h4>이 작품이 담긴 컬렉션</h4>

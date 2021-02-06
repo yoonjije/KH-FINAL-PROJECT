@@ -118,7 +118,6 @@ header a:hover {
     left: 100px;
     display: inline-block;
 }
-
 #modal-contents p {
     font-weight: bold;
 
@@ -127,8 +126,16 @@ header a:hover {
     text-align: center;
     margin: 0 auto;
     margin-top: 10px;
+    border-bottom: 1px solid #e3e3e3;
 }
 
+#rating-and-comment-modal-contents {
+    text-align: center;
+}
+
+#rating-and-comment-modal-contents textarea {
+    margin-top: 15px;
+}
 #wanna-watch-or-rating img {
     width: 80px;
     height: 80px;
@@ -167,7 +174,7 @@ header a:hover {
 
 
 #button-for-cancel {
-    width: 200px;
+    width: 100px;
     border: none;
     background-color: white;
     color: rgb(255, 7, 88);
@@ -176,7 +183,18 @@ header a:hover {
 }
 
 
+#button-for-submit {
+    width: 100px;
+    border: none;
+    background-color: rgb(255, 7, 88);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
 
+#rating-and-comment-modal-title {
+    text-align: center;
+}
 #star-rating {
     display: inline-block;
     position: relative;
@@ -415,6 +433,25 @@ header a:hover {
     transition: all 0.2s ease;
 }
 
+#report-modal-contents {
+    margin-top: 20px;
+}
+
+#report-modal-contents h5 {
+    font-weight: bolder;
+}
+
+#report-modal-contents div {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+#report-result-modal-contents {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
 #collection {
     border: none;
 }
