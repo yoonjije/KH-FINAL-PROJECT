@@ -10,8 +10,9 @@ ul{
 
 .movie_title {
 
+    margin-top: 10px;
     color: rgb(0, 0, 0);
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 700;
     letter-spacing: -0.7px;
     line-height: 28px;
@@ -30,7 +31,7 @@ ul{
 .modal_button {
     float: right;
     position: relative;
-    right: -240px;
+    right: -320px;
 }
 
 
@@ -69,6 +70,11 @@ padding: 0px;
     display: inline-block;
 }
 
+
+.movie_content{
+    display: flex;
+}
+
 .movie {
     padding-left: 0px;
 }
@@ -95,6 +101,7 @@ padding: 0px;
     border-bottom: 1px solid rgb(237, 237, 237);
 }
 .movie_name{
+    
     color: rgb(0, 0, 0);
     font-size: 17px;
     letter-spacing: -0.5px;
@@ -108,7 +115,7 @@ padding: 0px;
     margin-left: 30px;
     width: 76px;
     height: 110px;
-    margin: 0px 16px 0px 0px;
+    margin: 0px 16px 10px 0px;
 
 }
 
@@ -116,6 +123,7 @@ padding: 0px;
     width: 200px;
     height: 50px;
     margin-left: 20px;
+
 
 }
 
@@ -148,7 +156,9 @@ padding: 0px;
     margin-right: auto;
 }
   
-
+#modal_btn{
+    cursor: pointer;
+}
 
 .css-2e4qsb-UnratedStars {
     display: inline-block;
@@ -178,7 +188,7 @@ padding: 0px;
 
     .css-1sondvb-ContentInfo {
         display: flex;
-        border-bottom: 1px solid rgb(240, 240, 240);
+  
     }
 
     .css-bhgne5-StyledBackground {
@@ -203,6 +213,11 @@ padding: 0px;
         padding: 10px 0px;
     }
 
+    .css-1k6r5nr-RowActionButtons
+{
+    border-top: 1px solid rgb(240, 240, 240);
+}
+
     .css-1s4ktoa-RowActionButton-WishButton {
         display: inline-flex;
         flex-direction: column;
@@ -218,9 +233,14 @@ padding: 0px;
         box-sizing: border-box;
         width: 50%;
         padding: 13px 0px 15px;
-        cursor: pointer;
+        cursor: pointer;       
+
         border-right: 1px solid rgb(240, 240, 240);
     }
+
+
+
+
     .css-9gb35z-RowActionButton-WatchingButton {
         display: inline-flex;
         flex-direction: column;
@@ -237,6 +257,7 @@ padding: 0px;
         margin-left: 60px;
         padding: 13px 0px 15px;
         cursor: pointer;
+        
     }
     .css-4w0dnp-ColumnActionButton-CancelButton {
         -webkit-box-align: center;
@@ -244,11 +265,13 @@ padding: 0px;
         font-size: 15px;
         letter-spacing: -0.5px;
         line-height: 20px;
+        font-size: 22px;
+        font-weight: bold;
         border-bottom: 1px solid rgb(240, 240, 240);
         cursor: pointer;
         display: inline-block;
         color: rgb(255, 47, 110);
-        font-weight: 500;
+       
         text-align: center;
         width: 100%;
         padding: 15px 0px;
@@ -292,23 +315,3 @@ padding: 0px;
     }
 
 
-    .starR1{
-        background: url('/img/ico_review.png') no-repeat -52px 0;
-        background-size: auto 100%;
-        width: 15px;
-        height: 30px;
-        float:left;
-        text-indent: -9999px;
-        cursor: pointer;
-    }
-    .starR2{
-        background: url('/img/ico_review.png') no-repeat right 0;
-        background-size: auto 100%;
-        width: 15px;
-        height: 30px;
-        float:left;
-        text-indent: -9999px;
-        cursor: pointer;
-    }
-    .starR1.on{background-position:0 0;}
-    .starR2.on{background-position:-15px 0;}

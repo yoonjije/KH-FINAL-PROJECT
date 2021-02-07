@@ -23,7 +23,14 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
         integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
         crossorigin="anonymous"></script>
-    <title>별점주기</title>
+    <!--star-->
+    <link rel="stylesheet" href="css/fontawesome-stars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.1/jquery.barrating.min.js"></script>
+    <script type="text/javascript" src="js/jquery.barrating.min.js"></script>
+
+
+    <title>평가하기</title>
 
 </head>
 
@@ -77,7 +84,7 @@
     <div id="allcontents">
         <div id="top_wrap">
             <h1 id="howMany">5</h1>
-            
+
             <h1 id="count_comment">와우 이만큼 평가하셨어요</h1>
 
             <select class="custom-select" id="select-search">
@@ -93,105 +100,159 @@
 
                     <div class="movie_poster">
                         <div class="movie_wrap">
-                            <img class="movie_image" src="/img/poster.jpg">
+                            <img class="movie_image" src="img/poster.jpg">
                         </div>
                     </div>
 
                     <div class="movie_name">
                         <h3 class="movie_title"> 뮬란
                             <div class="modal_button">
-                                <button class="fas fa-ellipsis-v" data-toggle="modal"
+                                <button class="fas fa-ellipsis-v" id="modal_btn" data-toggle="modal"
                                     data-target="#exampleModal"></button>
                             </div>
                         </h3>
                         <div class="movie_info">
                             2009-미국
                         </div>
-                        <div class="starRev">
-                            <span class="starR1 on">별1_왼쪽</span>
-                            <span class="starR2">별1_오른쪽</span>
-                            <span class="starR1">별2_왼쪽</span>
-                            <span class="starR2">별2_오른쪽</span>
-                            <span class="starR1">별3_왼쪽</span>
-                            <span class="starR2">별3_오른쪽</span>
-                            <span class="starR1">별4_왼쪽</span>
-                            <span class="starR2">별4_오른쪽</span>
-                            <span class="starR1">별5_왼쪽</span>
-                            <span class="starR2">별5_오른쪽</span>
-                          </div>
-
-                            <div class="UnratedStars">
-                                <span src="/svg/star_empty.svg"class="UnraredStar-img"></span>
-                                <span src="/img/unrateStar.svg"class="UnraredStar-img"></span>
-                                <span src="/img/unrateStar.svg"class="UnraredStar-img"></span>
-                                <span src="/img/unrateStar.svg"class="UnraredStar-img"></span>
-
-
-                                <span src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0VFRSIgZD0iTTIyIDMzLjQ0NEw5LjgzIDQyLjMyN2MtLjc4NC41NzItMS44NDItLjE5Ni0xLjUzOS0xLjExOGw0LjY4Ny0xNC4zMkwuNzY5IDE4LjA2Yy0uNzg3LS41NjktLjM4My0xLjgxMi41ODgtMS44MWwxNS4wNjcuMDMzIDQuNjI0LTE0LjM0Yy4yOTgtLjkyNCAxLjYwNi0uOTI0IDEuOTA0IDBsNC42MjQgMTQuMzQgMTUuMDY3LS4wMzNjLjk3MS0uMDAyIDEuMzc1IDEuMjQxLjU4OCAxLjgxbC0xMi4yMDkgOC44MjkgNC42ODggMTQuMzJjLjMwMi45MjItLjc1NiAxLjY5LTEuNTQgMS4xMThMMjIgMzMuNDQ0eiIvPgogICAgPC9nPgo8L3N2Zz4K"
-                                class="UnraredStar-img"></span>
-                
+                        <select class="starRate">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
 
 
 
-                                <div class="RatedStar">
-                                    <span src="svg/rateStar.svg" class="RatedStars-img">
-                                    <span src="/img/rateStar.svg" class="RatedStars-img">
-                                    <span src="/img/rateStar.svg" class="RatedStars-img">
-                                    <span src="/img/rateStar.svg" class="RatedStars-img">
-                                    <span src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGREQ2MyIgZD0iTTIyIDMzLjQ0NEw5LjgzIDQyLjMyN2MtLjc4NC41NzItMS44NDItLjE5Ni0xLjUzOS0xLjExOGw0LjY4Ny0xNC4zMkwuNzY5IDE4LjA2Yy0uNzg3LS41NjktLjM4My0xLjgxMi41ODgtMS44MWwxNS4wNjcuMDMzIDQuNjI0LTE0LjM0Yy4yOTgtLjkyNCAxLjYwNi0uOTI0IDEuOTA0IDBsNC42MjQgMTQuMzQgMTUuMDY3LS4wMzNjLjk3MS0uMDAyIDEuMzc1IDEuMjQxLjU4OCAxLjgxbC0xMi4yMDkgOC44MjkgNC42ODggMTQuMzJjLjMwMi45MjItLjc1NiAxLjY5LTEuNTQgMS4xMThMMjIgMzMuNDQ0eiIvPgogICAgPC9nPgo8L3N2Zz4K" class="RatedStars-img">
-                                </div>
-                            </div>
-
-                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
-        <div class="movielist">
+        <!---------------------------------------- 임시시작---------------------------------------------->
+        <div id="mid_wrap">
+            <ul class="movie">
+                <li class="eachMovie">
+
+                    <div class="movie_poster">
+                        <div class="movie_wrap">
+                            <img class="movie_image"
+                                src="https://lh3.googleusercontent.com/proxy/tcfIGwS5H26KFYSTZwhUkIYhYG2Jc-KXXqLzwh6vfx9ezJJl7CCzz0R_2go26F1OFBKZQJGyUm6LVFoKqsnBohzJKRwr6yb__tXdDV4URUFJLnObFphivL1zSFP3imlyVZrvzK4d7OZuL695x6EXeQ">
+                        </div>
+                    </div>
+
+                    <div class="movie_name">
+                        <h3 class="movie_title"> 업
+                            <div class="modal_button">
+                                <button class="fas fa-ellipsis-v" id="modal_btn" data-toggle="modal"
+                                    data-target="#exampleModal"></button>
+                            </div>
+                        </h3>
+                        <div class="movie_info">
+                            2016-미국
+                        </div>
+                        <select class="starRate">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+
+
+
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mid_wrap">
+            <ul class="movie">
+                <li class="eachMovie">
+
+                    <div class="movie_poster">
+                        <div class="movie_wrap">
+                            <img class="movie_image"
+                                src="https://images.chosun.com/resizer/yZQMvczOQBMWykTxGL5NAwPUPhE=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/YN2NTUMNSAEY3HUC4YCXVNUZZA.jpg">
+                        </div>
+                    </div>
+
+                    <div class="movie_name">
+                        <h3 class="movie_title"> 소울
+                            <div class="modal_button">
+                                <button class="fas fa-ellipsis-v" id="modal_btn" data-toggle="modal"
+                                    data-target="#exampleModal"></button>
+                            </div>
+                        </h3>
+                        <div class="movie_info">
+                            2020-미국
+                        </div>
+
+                        <select class="starRate">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!---------------------------------------- 임시끝---------------------------------------------->
+        <!--  <div class="movielist">
             <h1>Page 1</h1>
         </div>
         <div class="movielist">
             <h1>Page 2</h1>
         </div>
+        -->
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="movie_content">
+                        <div class="movie_poster">
 
-                    <div class="movie_poster">
-                        <div class="movie_wrap">
+                            <div class="movie_wrap">
 
-                            <img class="movie_image" src="/img/poster.jpg">
+                                <img class="movie_image" src="img/poster.jpg">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class=" css-1sondvb-ContentInfo e1pa47va1 ">
-                        <div class="movie_name">
+                        <div class=" css-1sondvb-ContentInfo e1pa47va1 ">
+                            <div class="movie_name">
 
-                            <h3 class="movie_title"> 뮬란
+                                <h3 class="movie_title"> 뮬란
 
-                                <div class="modal_button">
+                                    <div class="modal_button">
+                                    </div>
+                                </h3>
+                                <div class="movie_info">
+                                    2009-미국
                                 </div>
-                            </h3>
-                            <div class="movie_info">
-                                2009-미국
                             </div>
                         </div>
                     </div>
-
                     <div class="css-1k6r5nr-RowActionButtons e1pa47va5">
                         <div aria-label="wished" role="button" class="css-1s4ktoa-RowActionButton-WishButton e1pa47va7">
-                            <img src="/img/bookmark.svg" alt="wished"><span>보고싶어요</span>
+                            <img src="svg/bookmark.svg" alt="wished"><span>보고싶어요</span>
                         </div>
                         <div aria-label="watching" role="button"
-                            class="css-9gb35z-RowActionButton-WatchingButton e1pa47va8"><img src="/img/cloud.svg"
+                            class="css-9gb35z-RowActionButton-WatchingButton e1pa47va8"><img src="svg/cloud.svg"
                                 alt="wished"><span>코멘트 작성하기</span></div>
                     </div>
 
@@ -199,12 +260,13 @@
 
                     <div class="modal-footer">
                         <div aria-label="cancel" role="button"
-                            class="css-4w0dnp-ColumnActionButton-CancelButton e1pa47va11">취소</div>
+                            class="css-4w0dnp-ColumnActionButton-CancelButton e1pa47va11" data-dismiss="modal">취소</div>
 
                     </div>
                 </div>
             </div>
         </div>
+
         <script src="js/star.js"></script>
         <script src="js/scroll.js"></script>
         <script src="js/jquery.min.js"></script>

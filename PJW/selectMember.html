@@ -25,12 +25,24 @@
 
         <div id="logo-container">
           <div id="logo">
-            <img src="img/logo.png" alt="">
+              <img src="img/logo.png" alt="">
+              <div id="icons">
+                  <div id="gohome">
+                      <img src="img/home.png" alt="">
+                      <span>home</span>
+                  </div>
+                  <div id="logout">
+                      <img src="img/logout.png" alt="">
+                      <span>logout</span>
+
+                  </div>
+                  
+
+              </div>
 
 
           </div>
-        </div>
-
+      </div>
 
 
       </div>
@@ -56,41 +68,36 @@
         <div id="dropdown-container" class="col-lg-12">
 
           <!--대쉬보드-->
-          <div id="dropdown" class="dropdown-dash">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              대쉬보드
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">통계보기</a>
-
+          <div id='cssmenu' class="col-lg-12 col-sm-12">
+            <ul>
+               <li><a href='#'><span>통계보기</span></a></li>
+               <li id="nav-info" class='active has-sub' style="margin-top: 100px;"><a href='#'><span>정보관리</span></a>
+                  <ul>
+                     <li class='has-sub'><a href='#'><span>회원관리</span></a>
+                        <ul>
+                           <li><a href='#'><span>회원조회</span></a></li>
+                           <li class='last'><a href='#'><span>블랙리스트 관리</span></a></li>
+                        </ul>
+                     </li>
+                    
+                  </ul>
+               </li>
+               <li id="nav-movieinfo" class='active has-sub' style="margin-top: 100px;"><a href='#'><span>영화관리</span></a>
+                  <ul>
+                    
+                     <li class='has-sub'><a href='#'><span>영화관리</span></a>
+                        <ul>
+                           <li><a href='#'><span>pick 추가</span></a></li>
+                           <li><a href='#'><span>pick 삭제</span></a></li>
+                           <li><a href='#'><span>코맨트 관리</span></a></li>
+                           <li class='last'><a href='#'><span>영화DB 관리</span></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               
+            </ul>
             </div>
-          </div>
-
-          <!--회원관리-->
-          <div id="dropdown" class="dropdown-user">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              회원관리
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">회원정보조회</a>
-              <a class="dropdown-item" href="#">블랙리스트관리</a>
-            </div>
-          </div>
-          <!--영화pick-->
-          <div id="dropdown" class="dropdown-movie">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              영화관리
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">pick 추가</a>
-              <a class="dropdown-item" href="#">pick 관리</a>
-              <a class="dropdown-item" href="#">코맨트관리</a>
-              <a class="dropdown-item" href="#">DB관리</a>
-            </div>
-          </div>
         </div>
       </div>
       <!--section 반응형-->
@@ -122,6 +129,7 @@
                   <th scope="col"></th>
                   <th scope="col">이름</th>
                   <th scope="col">이메일</th>
+                  <th scope="col">차단여부</th>
                   <th scope="col">가입날자</th>
                 </tr>
               </thead>
@@ -131,6 +139,7 @@
                   <td> <input class="form-check-input" type="checkbox" value="" id="userSelect"></td>
                   <td>이은규</td>
                   <td>cuteeungyu@naver.com</td>
+                  <td>영구정지</td>
                   <td>2021/02/01</td>
                 </tr>
 
@@ -139,6 +148,7 @@
                   <td> <input class="form-check-input" type="checkbox" value="" id="userSelect"></td>
                   <td>백종웅</td>
                   <td>jjeremy@naver.com</td>
+                  <td>없음</td>
                   <td>2021/02/01</td>
                 </tr>
 
@@ -147,6 +157,7 @@
                   <td> <input class="form-check-input" type="checkbox" value="" id="userSelect"></td>
                   <td>방부제</td>
                   <td>bang@naver.com</td>
+                  <td>코멘트차단</td>
                   <td>2021/02/01</td>
                 </tr>
               </tbody>
@@ -249,6 +260,7 @@
   <script src="js/jquery.min.js"></script>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 
 </html>

@@ -23,16 +23,13 @@
         <div class="title">코멘트</div>
         <div class="title" id="rating-title">관람객 평점 <span style="font-weight: bold;">2,345</span>건</div>
         <div class="dropdown" id="sort-dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                정렬 기준 선택
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#" id="thumbsup">좋아요 많은 순</a>
-                <a class="dropdown-item" href="#" id="recent">최신순</a>
-                <a class="dropdown-item" href="#" id="rating-high">평점 높은 순</a>
-                <a class="dropdown-item" href="#" id="rating-low">평점 낮은 순</a>
-            </div>
+            <select>
+                <option value="">정렬 기준 선택</option>
+                <option value="좋아요 많은 순">좋아요 많은 순</option>
+                <option value="최신순">최신순</option>
+                <option value="평점 높은 순">평점 높은 순</option>
+                <option value="평점 낮은 순">평점 낮은 순</option>
+            </select>
         </div>
         <div class="rating-zone">
             <div class="comment-card">

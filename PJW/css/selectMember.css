@@ -9,6 +9,7 @@
 }
 
 #title {
+    
     text-align: center;
 
 }
@@ -83,4 +84,8 @@
    text-align: center;
    margin-left: 270px;
    margin-top: 50px;
+}
+
+.form-group{
+    float: left;
 }

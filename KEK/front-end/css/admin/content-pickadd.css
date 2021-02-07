@@ -68,6 +68,7 @@
 
 #follow-data-container{
     margin-top: 100px;
+    text-align: center;
 }
 #follow-data-container > table{
     background-color: white;

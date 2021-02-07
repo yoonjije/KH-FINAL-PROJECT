@@ -12,3 +12,36 @@
     height: 50px;
     margin-left: 20px;
 }
+#icons{
+float: right;
+margin-right: 100px;
+}
+#gohome{
+    width: 40px;
+    height: 40px;
+    
+    display: inline-block;
+    border-radius: 10px;
+    
+    margin-right: 100px;
+}
+#gohome > img{
+    width: 100%;
+}
+#gohome > span{
+    color: white;
+}
+#logout{
+    width: 40px;
+    height: 40px;
+   
+    display: inline-block;
+    border-radius: 10px;
+}
+#logout > img {
+    width: 100%;
+    
+}
+#logout > span{
+    color: white;
+}
