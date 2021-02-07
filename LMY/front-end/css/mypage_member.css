@@ -8,7 +8,7 @@
 
 .title-div {
   padding-top: 20px;
-  padding-left: 200px;
+  padding-left: 40px;
   padding-bottom: 20px;
 }
 
@@ -163,4 +163,14 @@ h6 {
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: rgb(40, 165, 123);
+}
+
+.starcount {
+  font-size: 1rem;
+  color: rgb(130, 126, 126);
+}
+
+.sub-title {
+  font-style: italic;
+  color: black;
 }
