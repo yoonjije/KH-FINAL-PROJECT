@@ -103,3 +103,9 @@ textarea {
 .changefile {
   display: none;
 }
+
+.withdraw {
+  text-align: center;
+  display: inline-block;
+  width: 400px;
+}
