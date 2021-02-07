@@ -1,17 +1,9 @@
-$('.starRev span').click(function(){
-    $(this).parent().children('span').removeClass('on');
-    $(this).addClass('on').prevAll('span').addClass('on');
-   
-  
-
-    return false;
-  });
 
 
-//  $('.star7').click(function(){
- //  alert("2")
-   
-  
+$('.starRate').barrating({
+	theme: 'fontawesome-stars'
 
-  //  return false;
-//  });
+  ,initialRating : null
+  ,deselectable : true 
+  ,showSelectedRating: true
+});
