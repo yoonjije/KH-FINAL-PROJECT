@@ -8,10 +8,10 @@ $('.starRev span').click(function(){
   });
 
 
-  $('.star7').click(function(){
-   alert("2")
+//  $('.star7').click(function(){
+ //  alert("2")
    
   
 
-    return false;
-  });
+  //  return false;
+//  });

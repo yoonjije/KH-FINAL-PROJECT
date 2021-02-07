@@ -316,7 +316,7 @@ padding: 0px;
 
 
     .starR1{
-        background: url('/img/ico_review.png') no-repeat -52px 0;
+        background: url('/PJW/img/ico_review.png') no-repeat -52px 0;
         background-size: auto 100%;
         width: 15px;
         height: 30px;
@@ -325,7 +325,7 @@ padding: 0px;
         cursor: pointer;
     }
     .starR2{
-        background: url('/img/ico_review.png') no-repeat right 0;
+        background: url('/PJW/img/ico_review.png') no-repeat right 0;
         background-size: auto 100%;
         width: 15px;
         height: 30px;
