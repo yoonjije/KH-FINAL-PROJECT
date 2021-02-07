@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap'); 
+
+main{
+margin: 100px 150px;
+/* background-color: blueviolet; */
+}
+
+*font-family{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a, a:link{
+    text-decoration: none;
+    color: unset;
+   
+}
+가운데 영역
+.container {position: relative; width: 1280px; margin: 0 auto;}
+
+/* 로우 영역 */
+.row {padding: 0 28px;}
+
+/*슬라이더 */
+.slider_title{
+    letter-spacing: -0.4px;
+    line-height: 30px;
+    margin:20px 0;
+    /* margin-left: 35px; */
+    color:rgb(51, 51, 51);
+    font-size: 22px;
+    font-weight: 700;
+
+}
+/* 무비 */
+/* .movie {padding: 100px 0;} */
+
+.movie_chart {height: 380px;/*  position: relative;
+    justify-content: space-around; */
+}
+ .movie_chart > .poster {overflow: hidden;}
+ .test {width:auto;height: 400px; margin-right:18px; background-color: yellow;} 
+/* .test {float: left; width: 100px; height: 400px; margin-right:18px; background-color: yellow;}  */
+.movie_chart > div > div>  div:last-child {margin-right: 0;}
+
+.movie_box{
+    float: left; 
+    position: relative;
+    width:auto;
+    /* height: 400px; */
+     /* margin-left:35px;  */
+   
+}
+/* .poster {position: relative;
+  width: 200px; height: 370px; margin-right: 18px; background-color: palevioletred;} */
+.movie_img {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    vertical-align: top;
+    width: 200px;
+    height: 260px; 
+    opacity: 1;
+    object-fit: cover;
+}
+.poster .rank {
+    margin-top: 5px;
+    position: absolute; 
+    top: -3px; 
+    left: 10px; 
+    width: 25px; 
+    height: 25px; 
+    /* line-height: 50px; */
+    background-color: rgba(0, 0, 0, 0.70); 
+    text-align: center;
+    opacity: 1;
+    border-radius: 4px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: normal;
+}
+.movie_title {
+    margin-bottom:30px;
+    letter-spacing: -0.4px;
+    color:rgb(26, 26, 26);
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom:5px;
+}
+.movie_info {
+
+    font-size: 13px;
+    color:#74747b;
+    line-height:7px;
+    letter-spacing: -0.3px;
+    line-height: 18px;
+    overflow: hidden;
+    font-weight: 600;
+   
+}
+
+.movie_info span{
+    padding: 0 5px;
+}
+/* .movie_chart .row .next{
+    position:absolute;
+    /* top:40%; */
+    /* right: 50px;
+    top: 165px;
+    font-size:1.25em;
+    color: rgba(0, 0, 0, 0.70); 
+    cursor: pointer;
+  } */
+  /* .movie_chart .prev{
+    position:absolute;
+    left: 50px;
+    top: 165px;
+    font-size:1.25em;
+    color: rgba(0, 0, 0, 0.70); 
+      cursor: pointer;
+  }
+
+   */ */
+
+    .next{
+    position:absolute;
+    top:50%;
+    right:80px;
+    font-size:1.25em;
+    color:rgb(211, 7, 7);
+    cursor: pointer;
+  }
+   .prev{
+    position:absolute;
+    top:50%;
+    left:80px;
+    font-size:1.25em;
+    color:rgb(212, 14, 14);
+      cursor: pointer;
+  }
