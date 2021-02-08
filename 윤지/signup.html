@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="css/login.css" type="text/css">
+<link rel="stylesheet" href="css/signup.css" type="text/css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/index.css">
@@ -71,30 +71,36 @@
             <div class="logo">
                 <img src="image/logo2.png" width="198px" height="38px">
             </div>
-            <h2 class="title">로그인</h2>
+            <h2 class="title">회원가입</h2>
             <div class="login-form">
                 <form method="POST" action="#">
+                    <div class="form-box"> 
+                        <label>
+                            <input class="input-nickname" type="text" name="nickname" id="input-nickname" placeholder="닉네임" autocomplete="off" required />
+                        </label>
+                        <!-- <span class="error" id="nickname-required">이미 등록된 닉네임입니다.</span> -->
+                    </div>
+                    <div class="form-box">
+                        <label>
+                            <input class="input-email" type="email" name="email" id="input-email" placeholder="이메일" autocomplete="off" required />
+                        </label> 
+                        <!-- <span class="error" id="email-required">이미 가입된 이메일입니다.</span>    -->
+                    </div>
+                    <div class="form-box">
+                        <label>
+                            <input class="input" type="password" name="password" id="input-password" placeholder="비밀번호" autocomplete="off" required />
+                        </label>
+                        <!-- <span clas="error" id="password-required">정확하지 않은 비밀번호입니다.</span>     -->
+                    </div>
                     <p>
-                        <input class="input-email" type="email" name="email" placeholder="이메일" >
-                            <div value="true" class="xbutton">
-                                <span data-test="clearButton" aria-label="claer" role="button" class="xbtn"></span>
-                            </div>
-                        </input>
-                    </p>
-                    <p>
-                        <input class="input" type="password" name="pwd" placeholder="비밀번호" />
-                    </p>
-                    <p>
-                        <input class="login-button" type="submit" value="로그인" onclick="location.href='#'">
+                        <input class="login-button" type="submit" value="회원가입" onclick="location.href='#'">
                     </p>
                 </form>
             </div>
-            <div class="password-block">
-                <button>비밀번호를 잊어버리셨나요?</button>
-            </div>
+           
             <div class="signup-block">
-                계정이 없으신가요?
-                <button>회원가입</button>
+                이미 가입하셨나요?
+                <button>로그인</button>
             </div>
             <hr class="bottom-line">
 
